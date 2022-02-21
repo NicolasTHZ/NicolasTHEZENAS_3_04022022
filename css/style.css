@@ -1,4 +1,11 @@
-/*
+:root {
+    --color-grey: grey;
+    --color-purple: #9356dc;
+    --color-pink: #ff79da;
+    --color-green: #99e2d0;
+}
+
+/* /*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -56,6 +63,12 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
 }
 
 /* change colours to suit your needs */
@@ -99,4 +112,147 @@ hr {
 
 input, select {
     vertical-align:middle;
+} */
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header div img{
+    width: 50%;
+}
+
+header .header_logo{
+    display: flex;
+    justify-content: center;
+}
+
+header .header_geo{
+    background-color: var(--color-grey);
+    margin: 0.5rem 0 0 0;
+}
+
+header .header_description{
+    background-color: var(--color-grey);
+}
+
+header .header_description > *{
+    padding: 1rem 0.5rem;
+}
+
+header .header_description a{
+    margin: 1rem 0 0 0;
+}
+
+header .header_guide{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+header .header_guide a {
+    display: flex;
+    padding: 1rem;
+    background-color: grey;
+    position: relative;
+}
+
+header .header_guide a span{
+    position: absolute;
+    padding: 0.5rem;
+    margin-left: -1.9rem;
+    border-radius: 5rem;
+    background-color: var(--color-purple);
+}
+
+header div{
+    align-self: center;
+    text-align: center;
+}
+
+.button_list{
+    padding: 1rem 1.5rem;
+    color: white;
+    border-radius: 6rem;
+    background-image: linear-gradient(to bottom right,rgba(255,121,218,.9),rgba(147,86,220,.9));
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey);
+}
+
+main section nav{
+    display: flex;
+    flex-direction: column;
+}
+
+main section div{
+    border-radius: 20px;
+    border: 1px transparent;
+    margin: 0.5rem;
+    background-color: white;
+}
+
+main section nav .liste_restaurants-photos{
+    position: relative;
+    margin: 0;
+
+}
+
+main section nav .liste_restaurants-photos img{
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+main section nav .liste_restaurants-photos p{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: var(--color-green);
+}
+
+main section nav .liste_restaurants-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section nav .liste_restaurants-description .like::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f004";
+    color:black;
+}
+
+main section nav .liste_restaurants-description .like:visited{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font: var(--fa-font-solid);
+    content: "\f004";
+    color: var(--color-pink);
+}
+
+footer{
+    background-color: rgb(53, 46, 46);
+    color: white;
+    padding: 1rem;
+}
+
+.rotate {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: inline-block;
 }
