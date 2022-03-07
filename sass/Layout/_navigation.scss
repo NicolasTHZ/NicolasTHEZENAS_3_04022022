@@ -1,0 +1,107 @@
+@use "../Composants/" as *;
+
+.home_guide{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    .header_geo{
+        background-color: $color-darkgrey;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .header_description{
+        background-color: $color-lightgrey;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        h1{
+            font-size: xx-large;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 2rem;
+            width: 80%;
+        }
+        p{
+            font-size: x-large;
+            text-align: center;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        div{
+            padding: 3rem 3rem 5rem 3rem;
+            .button{
+                color: white;
+                font-size: x-large;
+                padding: 1rem 1.5rem;
+                border-radius: 6rem;
+                background-image: linear-gradient(to bottom right, rgba(255,121,218,.9), rgba(147,86,220,.9));
+                &:hover{
+                    box-shadow: 6px 6px 3px darken($color-darkgrey, 25%);
+                    transition-duration: 500ms;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .header_guide{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: xx-large;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            @media (min-width: $large-screen){
+                text-align: center;
+            }
+        }
+        div{
+            @media (min-width: $large-screen){
+                display: flex;
+                margin-bottom: 2rem;
+            }
+            div{
+                @media (min-width:$large-screen){
+                    flex: 1 1 30%;
+                }
+            }
+            a{
+                display: flex;
+                font-size: large;
+                width: 90%;
+                margin: 1rem auto;
+                background-color: $color-lightgrey;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                align-items: center;
+                span{
+                    position: relative;
+                    left: -2rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-color: $color-primary;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                i{
+                    opacity: 0.5;
+                    margin-right: 2rem;
+                }
+                p{
+                    font-weight:bold;
+                }
+            }
+        :hover{
+            background-color: lighten($color-secondary, 23%);
+        }
+        :hover i{
+            opacity: 1;
+            color: $color-primary;
+        }
+        }
+}
+}
+

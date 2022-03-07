@@ -1,0 +1,27 @@
+@use "variables.scss" as *;
+
+.like{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &:hover .fa-regular{
+        display: none;
+        transition-duration: 1000ms;
+    }
+    &:hover .fas{
+        opacity: 1;
+        transition-duration: 1000ms;
+        transform: scale(1.50);
+    }
+    .fa-regular{
+        font-size: x-large;
+        position: absolute;
+        color: black;
+    }
+    .fas{
+        font-size: x-large;
+        position: absolute;
+        color: $color-primary;
+        opacity: 0;
+    }
+}

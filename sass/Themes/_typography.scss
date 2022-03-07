@@ -1,0 +1,31 @@
+@use "../Composants" as *;
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.underline{
+    display: inline-block;
+    border-top: 2px solid $color-tertiary;
+    width: 4ch;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.price{
+    font-weight: bold;
+    z-index: 1;
+    flex: 0 1 100%;
+    justify-content: flex-end;
+}
+
+.description_repas{
+    z-index: 0;
+}
+
+.description_repas > *{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}

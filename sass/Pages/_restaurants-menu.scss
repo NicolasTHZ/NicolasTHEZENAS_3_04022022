@@ -1,0 +1,98 @@
+@use "../Composants/" as *;
+
+.restaurants-menu{
+    background-color: $color-lightgrey;
+    position: relative;
+    bottom: 2rem;
+    border-radius: 3rem 3rem 0 0;
+    padding: 1rem;
+    margin-bottom: -2rem;
+    .titre_restaurants{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0 0 0;
+        h1{
+            font-size: 2rem;
+            font-family: "Shrikhand", "cursive";
+        }
+        i{
+            font-size: 2.5rem;
+        }
+    }
+    .type_repas{
+        display: flex;
+        flex-direction: column;
+        @media (min-width:$large-screen){
+            flex-direction: row;
+        }
+        .titre_repas{
+            font-size: 1rem;
+            margin-top: 2.5rem;
+            font-weight: normal;
+        }
+        .liste_repas{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            @media (min-width:$large-screen){
+                flex: 1 1 33%;
+            }
+            .englobe_repas{
+                display: flex;
+                padding-left: 0.5rem;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                cursor: pointer;
+                transition-duration: .5s;
+                margin: 1rem 0;
+                max-width: 100%;
+                box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+                @media (min-width: $large-screen){
+                    max-width: 25rem;
+                }
+                &:hover>.repas_confirm{
+                    margin-right: 0rem;
+                    width: 6rem;
+                }
+                .menu_repas{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    max-width: 100%;
+                    .description_repas{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                    }
+                }
+                .repas_confirm{
+                    background-color: $color-tertiary;
+                    margin: -1rem -5rem -1rem 1rem;
+                    width: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition-duration: 1s;
+                    .repas_loader{
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+                        transform: rotate(360deg);
+                        transition-duration: 1s;
+                        i{
+                            color: $color-tertiary;
+                        }
+                    }
+            }
+        }
+        }
+    }
+}

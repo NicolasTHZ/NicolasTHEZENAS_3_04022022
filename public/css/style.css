@@ -110,11 +110,22 @@ input, select {
   box-sizing: border-box;
 }
 
+.button_container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .button {
-  color: white;
+  color: white !important;
   padding: 1rem 1.5rem;
   border-radius: 6rem;
   background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+}
+.button:hover {
+  box-shadow: 6px 6px 3px #9f9f9f;
+  transition-duration: 500ms;
+  opacity: 0.8;
 }
 
 .rotate {
@@ -126,6 +137,46 @@ input, select {
   display: inline-block;
 }
 
+.fadein_1 {
+  animation: fadeIn linear 0.4s;
+  -webkit-animation: fadeIn linear 0.4s;
+  -moz-animation: fadeIn linear 0.4s;
+  -o-animation: fadeIn linear 0.4s;
+  -ms-animation: fadeIn linear 0.4s;
+}
+
+.fadein_2 {
+  animation: fadeIn linear 0.8s;
+  -webkit-animation: fadeIn linear 0.8s;
+  -moz-animation: fadeIn linear 0.8s;
+  -o-animation: fadeIn linear 0.8s;
+  -ms-animation: fadeIn linear 0.8s;
+}
+
+.fadein_3 {
+  animation: fadeIn linear 1.2s;
+  -webkit-animation: fadeIn linear 1.2s;
+  -moz-animation: fadeIn linear 1.2s;
+  -o-animation: fadeIn linear 1.2s;
+  -ms-animation: fadeIn linear 1.2s;
+}
+
+.fadein_4 {
+  animation: fadeIn linear 1.5s;
+  -webkit-animation: fadeIn linear 1.5s;
+  -moz-animation: fadeIn linear 1.5s;
+  -o-animation: fadeIn linear 1.5s;
+  -ms-animation: fadeIn linear 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader-content {
   z-index: 3;
   position: fixed;
@@ -164,75 +215,130 @@ input, select {
     z-index: -1;
   }
 }
+.like {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.like:hover .fa-regular {
+  display: none;
+  transition-duration: 1000ms;
+}
+.like:hover .fas {
+  opacity: 1;
+  transition-duration: 1000ms;
+  transform: scale(1.5);
+}
+.like .fa-regular {
+  font-size: x-large;
+  position: absolute;
+  color: black;
+}
+.like .fas {
+  font-size: x-large;
+  position: absolute;
+  color: #9356DC;
+  opacity: 0;
+}
+
 header {
+  padding: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: white;
 }
-header .header_logo {
+
+.home {
+  color: black;
+  font-size: 1.5rem;
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-header .header_logo img {
-  width: 50%;
+
+.header_logo {
+  font-family: "Shrikhand", "cursive";
+  color: black;
+  text-align: center;
+  font-size: 2.5rem;
 }
-header nav {
+
+.home_guide {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
-header .header_geo {
+.home_guide .header_geo {
   background-color: #dfdfdf;
-  margin: 0.5rem 0 0 0;
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
-header .header_description {
+.home_guide .header_description {
   background-color: #f3f3f3;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-header .header_description h1 {
+.home_guide .header_description h1 {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
   margin-top: 2rem;
   width: 80%;
 }
-header .header_description p {
+.home_guide .header_description p {
   font-size: x-large;
   text-align: center;
   opacity: 0.9;
   margin-top: 0.5rem;
 }
-header .header_description div {
+.home_guide .header_description div {
   padding: 3rem 3rem 5rem 3rem;
 }
-header .header_description div .button {
+.home_guide .header_description div .button {
   color: white;
   font-size: x-large;
   padding: 1rem 1.5rem;
   border-radius: 6rem;
   background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
 }
-header .header_description div .button:hover {
+.home_guide .header_description div .button:hover {
   box-shadow: 6px 6px 3px #9f9f9f;
   transition-duration: 500ms;
   opacity: 0.8;
 }
-header .header_guide {
+.home_guide .header_guide {
   display: flex;
   flex-direction: column;
 }
-header .header_guide h2 {
+.home_guide .header_guide h2 {
   font-size: xx-large;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
-header .header_guide div a {
+@media (min-width: 1250px) {
+  .home_guide .header_guide h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 1250px) {
+  .home_guide .header_guide div {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1250px) {
+  .home_guide .header_guide div div {
+    flex: 1 1 30%;
+  }
+}
+.home_guide .header_guide div a {
   display: flex;
   font-size: large;
   width: 90%;
@@ -242,7 +348,7 @@ header .header_guide div a {
   border-radius: 0.5rem;
   align-items: center;
 }
-header .header_guide div a span {
+.home_guide .header_guide div a span {
   position: relative;
   left: -2rem;
   height: 1.5rem;
@@ -253,17 +359,17 @@ header .header_guide div a span {
   justify-content: center;
   align-items: center;
 }
-header .header_guide div a i {
+.home_guide .header_guide div a i {
   opacity: 0.5;
   margin-right: 2rem;
 }
-header .header_guide div a p {
+.home_guide .header_guide div a p {
   font-weight: bold;
 }
-header .header_guide div :hover {
+.home_guide .header_guide div :hover {
   background-color: #ffeefa;
 }
-header .header_guide div :hover i {
+.home_guide .header_guide div :hover i {
   opacity: 1;
   color: #9356DC;
 }
@@ -284,6 +390,11 @@ main section div {
   margin: 0.5rem;
   border-radius: 20px;
   background-color: white;
+}
+@media (min-width: 1250px) {
+  main section div {
+    flex: 0 1 32%;
+  }
 }
 main section div .liste_restaurants-photos {
   position: relative;
@@ -309,35 +420,21 @@ main section div .liste_restaurants-description {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (min-width: 1250px) {
+  main section div .liste_restaurants-description div {
+    flex: 0 1 60%;
+  }
+}
 main section div .liste_restaurants-description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-main section div .liste_restaurants-description .like {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-main section div .liste_restaurants-description .like:hover .fa-regular {
-  display: none;
-  transition-duration: 1000ms;
-}
-main section div .liste_restaurants-description .like:hover .fas {
-  opacity: 1;
-  transition-duration: 1000ms;
-  transform: scale(1.5);
-}
-main section div .liste_restaurants-description .like .fa-regular {
-  font-size: x-large;
-  position: absolute;
-  color: black;
-}
-main section div .liste_restaurants-description .like .fas {
-  font-size: large;
-  position: absolute;
-  color: #9356DC;
-  opacity: 0;
+@media (min-width: 1250px) {
+  main nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 footer {
@@ -355,6 +452,265 @@ footer div i {
 }
 footer p {
   margin: 0.4rem 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.underline {
+  display: inline-block;
+  border-top: 2px solid #99e2d0;
+  width: 4ch;
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  z-index: 1;
+  flex: 0 1 100%;
+  justify-content: flex-end;
+}
+
+.description_repas {
+  z-index: 0;
+}
+
+.description_repas > * {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.background-photos {
+  max-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 30%;
+}
+@media (min-width: 800px) {
+  .background-photos {
+    height: 30rem;
+    padding: initial;
+  }
+}
+@media (min-width: 1250px) {
+  .background-photos {
+    height: 30rem;
+    padding: initial;
+  }
+}
+
+.background-palettegout {
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.background-note {
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.background-alafrancaise {
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.background-delicesens {
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.restaurants-menu {
+  background-color: #f3f3f3;
+  position: relative;
+  bottom: 2rem;
+  border-radius: 3rem 3rem 0 0;
+  padding: 1rem;
+  margin-bottom: -2rem;
+}
+.restaurants-menu .titre_restaurants {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0 0;
+}
+.restaurants-menu .titre_restaurants h1 {
+  font-size: 2rem;
+  font-family: "Shrikhand", "cursive";
+}
+.restaurants-menu .titre_restaurants i {
+  font-size: 2.5rem;
+}
+.restaurants-menu .type_repas {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1250px) {
+  .restaurants-menu .type_repas {
+    flex-direction: row;
+  }
+}
+.restaurants-menu .type_repas .titre_repas {
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  font-weight: normal;
+}
+.restaurants-menu .type_repas .liste_repas {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (min-width: 1250px) {
+  .restaurants-menu .type_repas .liste_repas {
+    flex: 1 1 33%;
+  }
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas {
+  display: flex;
+  padding-left: 0.5rem;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  margin: 1rem 0;
+  max-width: 100%;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1250px) {
+  .restaurants-menu .type_repas .liste_repas .englobe_repas {
+    max-width: 25rem;
+  }
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas:hover > .repas_confirm {
+  margin-right: 0rem;
+  width: 6rem;
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas .menu_repas {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas .menu_repas .description_repas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas .repas_confirm {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas .repas_confirm .repas_loader {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(360deg);
+  transition-duration: 1s;
+}
+.restaurants-menu .type_repas .liste_repas .englobe_repas .repas_confirm .repas_loader i {
+  color: #99e2d0;
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.container:hover .icone {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.englobe_repas:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.englobe_repas:hover .icone {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.container:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.englobe_repas:hover .icone {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.englobe_repas:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.texte {
+  width: 100%;
+  margin-left: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  max-width: 100%;
+}
+
+.icone {
+  width: 7rem;
+  background: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -7rem;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  padding: 1rem;
+}
+
+.icone > i {
+  color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: white;
+  transition-duration: 0.5s;
+}
+
+.texte > * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

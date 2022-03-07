@@ -1,0 +1,65 @@
+@use "../Composants/" as *;
+
+main{
+    section{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-lightgrey;
+    h2{
+        font-size: xx-large;
+        margin-left: 1.5rem;
+        padding: 3rem 0 1.5rem 0;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem;
+        border-radius: 20px;
+        background-color: white;
+        @media (min-width:$large-screen){
+            flex: 0 1 32%;
+        }
+            .liste_restaurants-photos{
+                position: relative;
+                margin: 0;
+                img{
+                    height: 12rem;
+                    width: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+                p{
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    background-color: $color-tertiary;
+                    padding: 0.5rem;
+                    color: darken($color-tertiary, 40%);
+                }
+            }
+            .liste_restaurants-description{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                div{
+                    @media (min-width:$large-screen){
+                        flex: 0 1 60%;
+                }
+            }
+            }            
+    .liste_restaurants-description{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    }
+    }
+    nav{
+        @media (min-width:$large-screen){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+

@@ -1,5 +1,42 @@
 @use "_variables.scss" as *;
 
+.fadein_1{
+    animation: fadeIn linear 0.4s;
+  -webkit-animation: fadeIn linear 0.4s;
+  -moz-animation: fadeIn linear 0.4s;
+  -o-animation: fadeIn linear 0.4s;
+  -ms-animation: fadeIn linear 0.4s;
+}
+
+.fadein_2{
+    animation: fadeIn linear 0.8s;
+  -webkit-animation: fadeIn linear 0.8s;
+  -moz-animation: fadeIn linear 0.8s;
+  -o-animation: fadeIn linear 0.8s;
+  -ms-animation: fadeIn linear 0.8s;
+}
+
+.fadein_3{
+    animation: fadeIn linear 1.2s;
+  -webkit-animation: fadeIn linear 1.2s;
+  -moz-animation: fadeIn linear 1.2s;
+  -o-animation: fadeIn linear 1.2s;
+  -ms-animation: fadeIn linear 1.2s;
+}
+
+.fadein_4{
+    animation: fadeIn linear 1.5s;
+  -webkit-animation: fadeIn linear 1.5s;
+  -moz-animation: fadeIn linear 1.5s;
+  -o-animation: fadeIn linear 1.5s;
+  -ms-animation: fadeIn linear 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0.01;}
+  100% {opacity:1;}
+}
+
 
 .loader-content
 {
