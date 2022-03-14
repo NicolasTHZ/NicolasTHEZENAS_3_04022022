@@ -13,11 +13,7 @@
     overflow: hidden;
     max-width: 100%;
 }
-.container:hover .icone {
-    margin-right: 0;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-}
+
 .englobe_repas:hover i {
     transform: rotate(360deg);
     transition-duration: 0.5s;
@@ -26,10 +22,6 @@
     margin-right: 0;
     transition-duration: 0.5s;
     transition-timing-function: ease;
-}
-.container:hover i {
-    transform: rotate(360deg);
-    transition-duration: 0.5s;
 }
 .englobe_repas:hover .icone {
     margin-right: 0;
