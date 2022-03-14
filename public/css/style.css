@@ -56,6 +56,7 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
@@ -138,27 +139,27 @@ input, select {
 }
 
 .entrees {
-  animation: fadeIn linear 0.15s;
-  -webkit-animation: fadeIn linear 0.15s;
-  -moz-animation: fadeIn linear 0.15s;
-  -o-animation: fadeIn linear 0.15s;
-  -ms-animation: fadeIn linear 0.15s;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
 }
 
-.plats {
-  animation: fadeIn linear 0.3s;
-  -webkit-animation: fadeIn linear 0.3s;
-  -moz-animation: fadeIn linear 0.3s;
-  -o-animation: fadeIn linear 0.3s;
-  -ms-animation: fadeIn linear 0.3s;
+npm .plats {
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
 }
 
 .desserts {
-  animation: fadeIn linear 0.4s;
-  -webkit-animation: fadeIn linear 0.4s;
-  -moz-animation: fadeIn linear 0.4s;
-  -o-animation: fadeIn linear 0.4s;
-  -ms-animation: fadeIn linear 0.4s;
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
 }
 
 .fadein_1 {
@@ -186,11 +187,11 @@ input, select {
 }
 
 .fadein_4 {
-  animation: fadeIn linear 1.5s;
-  -webkit-animation: fadeIn linear 1.5s;
-  -moz-animation: fadeIn linear 1.5s;
-  -o-animation: fadeIn linear 1.5s;
-  -ms-animation: fadeIn linear 1.5s;
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
 }
 
 @keyframes fadeIn {
@@ -289,6 +290,10 @@ header {
   color: black;
   text-align: center;
   font-size: 2.5rem;
+}
+
+.home_guide .header_geo i {
+  margin-right: 1rem;
 }
 
 .home_guide {
@@ -476,6 +481,13 @@ footer div i {
 }
 footer p {
   margin: 0.4rem 0;
+  color: white;
+}
+footer p a {
+  color: white !important;
+}
+footer p avisited {
+  color: white !important;
 }
 
 body {

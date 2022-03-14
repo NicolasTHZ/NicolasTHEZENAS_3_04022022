@@ -12,5 +12,12 @@ footer{
     }
     p{
         margin: 0.4rem 0;
+        color:white;
+        a{
+            color: white !important;
+        &visited{
+            color: white !important;
+        }
+        }
     }
 }
