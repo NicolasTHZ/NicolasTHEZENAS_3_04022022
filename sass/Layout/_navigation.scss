@@ -9,6 +9,13 @@
         display: flex;
         justify-content: center;
         padding: 1rem;
+        form input{
+            background-color: #dfdfdf;
+            border: 0;
+            font-size: 1rem;
+            width: 100%;
+            margin-left:1rem;
+        }
     }
     .header_description{
         background-color: $color-lightgrey;
@@ -16,15 +23,15 @@
         align-items: center;
         flex-direction: column;
         margin-bottom: 1rem;
-        h1{
-            font-size: xx-large;
+        h2{
+            font-size: 1.6rem;
             font-weight: bold;
             text-align: center;
             margin-top: 2rem;
             width: 80%;
         }
         p{
-            font-size: x-large;
+            font-size: 1.2rem;
             text-align: center;
             opacity: 0.9;
             margin-top: 0.5rem;
@@ -34,8 +41,8 @@
             white-space: nowrap;
             .button{
                 color: white;
-                font-size: x-large;
-                padding: 1rem 1.5rem;
+                font-size: 1.1rem;
+                padding: 1rem 1rem;
                 border-radius: 6rem;
                 background-image: linear-gradient(to bottom right, rgba(255,121,218,.9), rgba(147,86,220,.9));
                 &:hover{
@@ -50,7 +57,7 @@
         display: flex;
         flex-direction: column;
         h2{
-            font-size: xx-large;
+            font-size: 1.5rem;
             margin-left: 1.5rem;
             margin-bottom: 1rem;
             @media (min-width: $large-screen){
@@ -67,7 +74,7 @@
                     flex: 1 1 30%;
                 }
             }
-            a{
+            article{
                 display: flex;
                 font-size: large;
                 width: 90%;
@@ -76,6 +83,7 @@
                 padding: 1.5rem;
                 border-radius: 0.5rem;
                 align-items: center;
+                box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 15%);
                 span{
                     position: relative;
                     left: -2rem;
@@ -86,6 +94,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    color: white;
                 }
                 i{
                     opacity: 0.5;
@@ -95,7 +104,7 @@
                     font-weight:bold;
                 }
             }
-        :hover{
+        :hover article{
             background-color: lighten($color-secondary, 23%);
         }
         :hover i{

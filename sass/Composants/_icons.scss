@@ -21,7 +21,14 @@
     .fas{
         font-size: x-large;
         position: absolute;
-        color: $color-primary;
         opacity: 0;
+        background:-moz-linear-gradient(bottom, #ff79dae6 0%, #9356dce6 100%); 
+        background: -webkit-linear-gradient(bottom, #ff79dae6 0%,#9356dce6 100%); 
+        background: linear-gradient(to top, #ff79dae6 0%,#9356dce6 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+       -webkit-text-fill-color:transparent;
     }
+    
 }
