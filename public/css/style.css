@@ -329,6 +329,7 @@ header {
 }
 .home_guide .header_description div {
   padding: 3rem 3rem 5rem 3rem;
+  white-space: nowrap;
 }
 .home_guide .header_description div .button {
   color: white;
